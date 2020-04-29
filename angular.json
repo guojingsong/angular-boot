@@ -165,7 +165,8 @@
           }
         }
       }
-    },
+    }
+  },
   "defaultProject": "Angular-boot",
   "cli": {
     "analytics": "9161bdf1-bf44-409e-b019-cb6cdbc07c6f"
