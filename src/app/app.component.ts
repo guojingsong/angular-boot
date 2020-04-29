@@ -247,4 +247,27 @@ export class AppComponent implements OnInit {
     }
     this.generateForm(this.jsonFormSchema);
   }
+
+  orientation = 'horizontal';
+  splitBarSize = '2px';
+  disabledBarSize = '1px';
+
+  // splitter pane input
+  size = '30%';
+  minSize = '20%';
+  maxSize = '60%';
+
+  btnContent = '全屏';
+
+  launchFullscreen({isFullscreen}) {
+    if (isFullscreen) {
+      this.btnContent = '退出全屏';
+    } else {
+      this.btnContent = '全屏';
+    }
+  }
+  sizeChange(size) {
+    console.log(size);
+  }
+
 }

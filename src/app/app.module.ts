@@ -12,8 +12,8 @@ import {  MatCheckboxModule } from '@angular/material/checkbox';
 import {  MatIconModule } from '@angular/material/icon';
 import {  MatMenuModule } from '@angular/material/menu'; 
 import {  MatSelectModule } from '@angular/material/select';
-            
 
+import { DevUIModule } from 'ng-devui';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { routes } from './app-routing.module';
@@ -33,7 +33,8 @@ import { AceEditorDirective } from './ace-editor.directive';
     MaterialDesignFrameworkModule,
     Bootstrap4FrameworkModule,
     Bootstrap3FrameworkModule,
-    NoFrameworkModule
+    NoFrameworkModule,
+    DevUIModule
   ],
   bootstrap: [AppComponent]
 })
