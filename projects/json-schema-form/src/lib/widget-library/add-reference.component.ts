@@ -11,6 +11,7 @@ import { JsonSchemaFormService } from '../json-schema-form.service';
   // tslint:disable-next-line:component-selector
   selector: 'add-reference-widget',
   template: `
+    <div>add-reference-widget</div>
     <button *ngIf="showAddButton"
       [class]="options?.fieldHtmlClass || ''"
       [disabled]="options?.readonly"

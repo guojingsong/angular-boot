@@ -8,6 +8,7 @@ import { JsonSchemaFormService } from '../json-schema-form.service';
   // tslint:disable-next-line:component-selector
   selector: 'select-widget',
   template: `
+    <div>select-widget</div>  
     <div
       [class]="options?.htmlClass || ''">
       <label *ngIf="options?.title"
