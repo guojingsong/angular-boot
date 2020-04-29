@@ -1,0 +1,17 @@
+ng new AngularBoot --create-application=false --routing=true --style=scss --skipInstall=true
+
+cd AngularBoot
+
+ng generate application tools-application --routing=true --prefix=gjs --force=true
+
+ng generate library json-schema-form --skipInstall=true
+
+
+widget-library
+
+ng generate module     widget-library  --project=json-schema-form
+
+ng generate component  widget-library\section  --project=json-schema-form --module=widget-library   --style=scss
+ng generate component  widget-library\root     --project=json-schema-form --module=widget-library   --style=scss
+
+
