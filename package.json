@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "bl": "ng build json-schema-form",
+    "be": "ng build json-edit",    
     "b": "ng build",
     "test": "ng test",
     "lint": "ng lint",

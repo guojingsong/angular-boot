@@ -166,6 +166,46 @@
           }
         }
       }
+    },
+    "json-edit": {
+      "projectType": "library",
+      "root": "projects/json-edit",
+      "sourceRoot": "projects/json-edit/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/json-edit/tsconfig.lib.json",
+            "project": "projects/json-edit/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/json-edit/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/json-edit/src/test.ts",
+            "tsConfig": "projects/json-edit/tsconfig.spec.json",
+            "karmaConfig": "projects/json-edit/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/json-edit/tsconfig.lib.json",
+              "projects/json-edit/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "Angular-boot",

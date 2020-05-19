@@ -25,6 +25,10 @@
       "json-schema-form2": [
         "dist/json-schema-form2/json-schema-form2",
         "dist/json-schema-form2"
+      ],
+      "json-edit": [
+        "dist/json-edit/json-edit",
+        "dist/json-edit"
       ]
     }
   },
