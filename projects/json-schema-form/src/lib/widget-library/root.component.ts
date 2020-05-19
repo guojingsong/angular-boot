@@ -21,7 +21,8 @@ import { JsonSchemaFormService } from '../json-schema-form.service';
         <select-framework-widget *ngIf="showWidget(layoutItem)"
           [dataIndex]="layoutItem?.arrayItem ? (dataIndex || []).concat(i) : (dataIndex || [])"
           [layoutIndex]="(layoutIndex || []).concat(i)"
-          [layoutNode]="layoutItem"></select-framework-widget>
+          [layoutNode]="layoutItem">
+        </select-framework-widget>
       </div>
     </div>`,
   styles: [`

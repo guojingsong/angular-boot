@@ -343,20 +343,20 @@ export class JsonSchemaFormComponent implements ControlValueAccessor, OnChanges,
       // (These only work if the 'debug' option has also been set to 'true'.)
       if (this.debug || this.jsf.formOptions.debug) {
         const vars: any[] = [];
-        // vars.push(this.jsf.schema);
-        // vars.push(this.jsf.layout);
-        // vars.push(this.options);
-        // vars.push(this.jsf.formValues);
-        // vars.push(this.jsf.formGroup.value);
-        // vars.push(this.jsf.formGroupTemplate);
-        // vars.push(this.jsf.formGroup);
-        // vars.push(this.jsf.schemaRefLibrary);
-        // vars.push(this.jsf.layoutRefLibrary);
-        // vars.push(this.jsf.templateRefLibrary);
-        // vars.push(this.jsf.dataMap);
-        // vars.push(this.jsf.arrayMap);
-        // vars.push(this.jsf.schemaRecursiveRefMap);
-        // vars.push(this.jsf.dataRecursiveRefMap);
+         vars.push(this.jsf.schema);
+         vars.push(this.jsf.layout);
+         vars.push(this.options);
+         vars.push(this.jsf.formValues);
+         vars.push(this.jsf.formGroup.value);
+         vars.push(this.jsf.formGroupTemplate);
+         vars.push(this.jsf.formGroup);
+         vars.push(this.jsf.schemaRefLibrary);
+         vars.push(this.jsf.layoutRefLibrary);
+         vars.push(this.jsf.templateRefLibrary);
+         vars.push(this.jsf.dataMap);
+         vars.push(this.jsf.arrayMap);
+         vars.push(this.jsf.schemaRecursiveRefMap);
+         vars.push(this.jsf.dataRecursiveRefMap);
         this.debugOutput = vars.map(v => JSON.stringify(v, null, 2)).join('\n');
       }
       this.formInitialized = true;
