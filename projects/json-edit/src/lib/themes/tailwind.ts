@@ -119,7 +119,7 @@ export class tailwindTheme extends AbstractTheme {
     return el
   }
 
-  getFormCheckboxControl (label, input, compact) {
+  getFormCheckboxControl (label, input, compact, infoText) {
     label.insertBefore(input, label.firstChild) /* Move input into label element */
     if (compact) label.classList.add('inline-flex flex-row')
     return label
@@ -147,7 +147,7 @@ export class tailwindTheme extends AbstractTheme {
     return el
   }
 
-  getFormRadioControl (label, input, compact) {
+  getFormRadioControl (label, input, compact,infoText?) {
     label.insertBefore(input, label.firstChild) /* Move input into label element */
     if (compact) label.classList.add('form-radio')
     return label
@@ -381,9 +381,9 @@ export class tailwindTheme extends AbstractTheme {
   }
 
   getProgressBar () {
-    const min = 0
-    const max = 100
-    const start = 0
+    const min:string = '0'
+    const max:string = '100'
+    const start:string = '0'
 
     const container = document.createElement('div')
     container.classList.add('progress')

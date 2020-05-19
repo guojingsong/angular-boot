@@ -36,7 +36,7 @@ export class ChoicesEditor extends SelectEditor {
       this.onChange()
     } else super.setValue(value, initial)
   }
-  typecast(arg0: any) {
+  typecast(arg0: any): void{
     throw new Error("Method not implemented.")
   }
   onChange() {

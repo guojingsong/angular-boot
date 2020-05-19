@@ -1,7 +1,8 @@
 /* Base Foundation theme */
 import { AbstractTheme } from '../theme.js'
-
+declare const window:any;
 export class foundationTheme extends AbstractTheme {
+  queuedInputErrorText: any;
   getChildEditorHolder () {
     const el = document.createElement('div')
     el.style.marginBottom = '15px'
@@ -60,7 +61,7 @@ export class foundationTheme extends AbstractTheme {
   getIndentedPanel () {
     const el = document.createElement('div')
     el.classList.add('panel')
-    el.style.paddingBottom = 0
+    //el.style.paddingBottom = 0
     return el
   }
 
@@ -396,14 +397,14 @@ export class foundation6Theme extends foundation5Theme {
   getIndentedPanel () {
     const el = document.createElement('div')
     el.classList.add('callout', 'secondary')
-    el.style = 'padding-left: 10px; margin-left: 10px;'
+    //el.style = 'padding-left: 10px; margin-left: 10px;'
     return el
   }
 
   getButtonHolder () {
     const el = document.createElement('span')
     el.classList.add('button-group', 'tiny')
-    el.style.marginBottom = 0
+    //el.style.marginBottom = 0
     return el
   }
 
@@ -562,8 +563,8 @@ export class foundation6Theme extends foundation5Theme {
 }
 
 /* Custom stylesheet rules. format: "selector" : "CSS rules" */
-foundationTheme.rules = { 'div[data-schemaid="root"]:after': 'position:relative;color:red;margin:10px 0;font-weight:600;display:block;width:100%;text-align:center;content:"This is an old JSON-Editor 1.x Theme and might not display elements correctly when used with the 2.x version"' }
-foundation3Theme.rules = foundationTheme.rules
-foundation4Theme.rules = foundationTheme.rules
-foundation5Theme.rules = foundationTheme.rules
-foundation6Theme.rules = foundationTheme.rules
+//foundationTheme.rules = { 'div[data-schemaid="root"]:after': 'position:relative;color:red;margin:10px 0;font-weight:600;display:block;width:100%;text-align:center;content:"This is an old JSON-Editor 1.x Theme and might not display elements correctly when used with the 2.x version"' }
+//foundation3Theme.rules = foundationTheme.rules
+//foundation4Theme.rules = foundationTheme.rules
+//foundation5Theme.rules = foundationTheme.rules
+//foundation6Theme.rules = foundationTheme.rules

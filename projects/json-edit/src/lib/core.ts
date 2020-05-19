@@ -321,13 +321,13 @@ export class JSONEditor {
   }
 
   registerEditor (editor:AbstractEditor) {
-    this.editors = this.editors || {}
+    //this.editors = this.editors || {}
     this.editors[editor.path] = editor
     return this
   }
 
-  unregisterEditor (editor) {
-    this.editors = this.editors || {}
+  unregisterEditor (editor:AbstractEditor) {
+    //this.editors = this.editors || {}
     this.editors[editor.path] = null
     return this
   }

@@ -13,7 +13,7 @@ export class ObjectEditor extends AbstractEditor {
   basicPane: any
   tabPanesContainer: any
   tabs_holder: any
-  cached_editors: {}
+  cached_editors: AbstractEditor[]
   minwidth: number
   maxwidth: number
   rows: any
@@ -42,7 +42,7 @@ export class ObjectEditor extends AbstractEditor {
     return extend({}, this.schema.default || {})
   }
 
-  getChildEditors () {
+  getChildEditors(): AbstractEditor[] {
     return this.editors
   }
 
@@ -405,8 +405,8 @@ export class ObjectEditor extends AbstractEditor {
   preBuild () {
     super.preBuild()
 
-    this.editors = {}
-    this.cached_editors = {}
+    this.editors = [];
+    this.cached_editors = [];
 
     this.format = this.options.layout || this.options.object_layout || this.schema.format || this.jsoneditor.options.object_layout || 'normal'
 

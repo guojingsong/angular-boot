@@ -2,6 +2,7 @@ import { ipValidator } from './validators/ip-validator.js'
 import { extend, hasOwnProperty } from './utilities'
 declare const window:any;
 export class Validator {
+  [x: string]: any;
   jsoneditor: any
   schema: any
   options: any
