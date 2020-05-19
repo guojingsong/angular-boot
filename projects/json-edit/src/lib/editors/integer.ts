@@ -14,7 +14,9 @@ export class IntegerEditor extends NumberEditor {
     }
     return isInteger(this.value) ? parseInt(this.value) : this.value
   }
+  /*
   value(value: any) {
     throw new Error("Method not implemented.")
   }
+  */
 }

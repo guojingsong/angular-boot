@@ -91,7 +91,7 @@ export class DatetimeEditor extends StringEditor {
     }
 
     const value = this.schema.format === 'time' ? `1970-01-01 ${this.value}` : this.value
-    return parseInt(new Date(value).getTime() / 1000)
+    return new Date(value).getTime() / 1000
   }
 
   setValue (value, initial, fromTemplate) {

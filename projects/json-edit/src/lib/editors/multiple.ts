@@ -57,7 +57,7 @@ export class MultipleEditor extends AbstractEditor {
     }
   }
 
-  disable (alwaysDisabled?) {
+  disable (alwaysDisabled?:boolean) {
     if (alwaysDisabled) this.always_disabled = true
     if (this.editors) {
       for (let i = 0; i < this.editors.length; i++) {

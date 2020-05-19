@@ -37,6 +37,7 @@ export class AbstractEditor {
   value: any
   disabled: boolean
   input: any
+  option: any
 
   constructor (options, defaults) {
     this.defaults = defaults
@@ -515,7 +516,7 @@ export class AbstractEditor {
     }
   }
 
-  setValue(value: any): void{
+  setValue(value: any,initial?:any): void{
     this.value = value
   }
 
@@ -589,7 +590,7 @@ export class AbstractEditor {
     this.disabled = false
   }
 
-  disable (): void {
+  disable (alwaysDisabled?:boolean): void {
     this.disabled = true
   }
 

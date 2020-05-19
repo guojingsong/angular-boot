@@ -119,7 +119,7 @@ export class tailwindTheme extends AbstractTheme {
     return el
   }
 
-  getFormCheckboxControl (label, input, compact, infoText) {
+  getFormCheckboxControl (label, input, compact, infoText?) {
     label.insertBefore(input, label.firstChild) /* Move input into label element */
     if (compact) label.classList.add('inline-flex flex-row')
     return label

@@ -5,6 +5,7 @@ import { StringEditor } from './string'
 
 export class SignatureEditor extends StringEditor {
   signaturePad: any
+  inputs: Iterable<unknown> | ArrayLike<unknown>;
   build () {
     if (!this.options.compact) this.header = this.label = this.theme.getFormInputLabel(this.getTitle(), this.isRequired())
     if (this.schema.description) this.description = this.theme.getFormInputDescription(this.schema.description)
@@ -86,10 +87,8 @@ export class SignatureEditor extends StringEditor {
       this.container.appendChild(message)
     }
   }
-  inputs(inputs: any) {
-    throw new Error("Method not implemented.")
-  }
 
+ 
   setValue (val) {
     if (typeof SignaturePad === 'function') {
       const sanitized = this.sanitize(val)

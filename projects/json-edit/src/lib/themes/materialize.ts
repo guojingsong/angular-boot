@@ -154,7 +154,7 @@ export class materializeTheme extends AbstractTheme {
 
   getChildEditorHolder () {
     const el:HTMLDivElement = document.createElement('div')
-    el.marginBottom = '10px'
+    //el.marginBottom = '10px'
     return el
   }
 
@@ -236,7 +236,7 @@ export class materializeTheme extends AbstractTheme {
   getTab (span) {
     const el:HTMLElement = document.createElement('li')
     el.classList.add('tab')
-    el.style = el.style || {}
+    //el.style = el.style || {}
     this.applyStyles(el,
       {
         width: '100%',

@@ -1,7 +1,7 @@
 import { SelectEditor } from './select'
 
 export class RadioEditor extends SelectEditor {
-  label: string
+  label: any
   infoButton: any
   radioContainer: HTMLDivElement
   radioGroup: any[]
