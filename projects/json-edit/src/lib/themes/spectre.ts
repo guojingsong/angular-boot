@@ -1,6 +1,6 @@
 /* Spectre Theme using Spectre CSS framework. <https://picturepan2.github.io/spectre/index.html> */
-import { AbstractTheme } from '../theme.js'
-import rules from './spectre.css.js'
+import { AbstractTheme } from '../theme'
+import rules from './spectre.css'
 declare const window:any;
 /* Config options that allows changing various aspects of the output */
 const options = {
@@ -358,7 +358,7 @@ export class spectreTheme extends AbstractTheme {
         if (selectized) {
           /* Remove Spectre class 'form-select' as this conflicts with Selectize styling */
           selectized.classList.remove('form-select')
-          Array.from(selectized.querySelectorAll('.form-select')).forEach(el => {
+          Array.from(selectized.querySelectorAll('.form-select')).forEach((el:Element) => {
             el.classList.remove('form-select')
           })
         }

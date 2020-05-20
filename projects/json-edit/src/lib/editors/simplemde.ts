@@ -1,5 +1,5 @@
-import { StringEditor } from './string.js'
-import { extend } from '../utilities.js'
+import { StringEditor } from './string'
+import { extend } from '../utilities'
 declare const window:any;
 export class SimplemdeEditor extends StringEditor {
   simplemde_instance: any;

@@ -1,4 +1,4 @@
-import { AbstractIconLib } from '../iconlib.js'
+import { AbstractIconLib } from '../iconlib'
 
 const iconPrefix = 'fi-'
 const mapping = {

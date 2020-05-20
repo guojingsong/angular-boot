@@ -405,8 +405,8 @@ export class ObjectEditor extends AbstractEditor {
   preBuild () {
     super.preBuild()
 
-    this.editors = [];
-    this.cached_editors = [];
+    this.editors = []
+    this.cached_editors = []
 
     this.format = this.options.layout || this.options.object_layout || this.schema.format || this.jsoneditor.options.object_layout || 'normal'
 

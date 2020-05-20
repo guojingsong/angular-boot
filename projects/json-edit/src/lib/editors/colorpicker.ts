@@ -5,8 +5,8 @@ Edtended handling of  oolor type fields.
 Has optional support for using https://github.com/Sphinxxxx/vanilla-picker.
 
 */
-import { StringEditor } from './string.js'
-import { extend } from '../utilities.js'
+import { StringEditor } from './string'
+import { extend } from '../utilities'
 declare const window:any;
 export class ColorEditor extends StringEditor {
   picker_instance: any;

@@ -1,5 +1,5 @@
-import { AbstractEditor } from '../editor.js'
-import { extend, trigger } from '../utilities.js'
+import { AbstractEditor } from '../editor'
+import { extend, trigger } from '../utilities'
 
 export class ArrayEditor extends AbstractEditor {
   rows: any

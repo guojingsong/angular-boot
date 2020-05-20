@@ -1,4 +1,4 @@
-import { AbstractTheme } from '../theme.js'
+import { AbstractTheme } from '../theme'
 
 export class jqueryuiTheme extends AbstractTheme {
   queuedInputErrorText: any

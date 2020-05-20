@@ -1,6 +1,6 @@
 /* hyper-link describeBy Editor */
-import { AbstractEditor } from '../editor.js'
-import { extend } from '../utilities.js'
+import { AbstractEditor } from '../editor'
+import { extend } from '../utilities'
 
 export class DescribedByEditor extends AbstractEditor {
   editors: AbstractEditor[]

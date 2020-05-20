@@ -1,6 +1,6 @@
 import { SelectEditor } from './select'
 import { extend } from '../utilities'
-//import rules from './choices.css.js'
+import rules from './choices.css'
 
 declare const window:any;
 export class ChoicesEditor extends SelectEditor {

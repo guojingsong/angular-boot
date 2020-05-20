@@ -26,12 +26,6 @@ export class ArrayChoicesEditor extends MultiSelectEditor {
       this.onChange(true)
     } else super.setValue(value, initial)
   }
-  value(value: any) {
-    throw new Error("Method not implemented.")
-  }
-  onChange(arg0: boolean) {
-    throw new Error("Method not implemented.")
-  }
 
   afterInputReady () {
     if (window.Choices && !this.choices_instance) {
@@ -67,12 +61,6 @@ export class ArrayChoicesEditor extends MultiSelectEditor {
     }
     super.afterInputReady()
   }
-  expandCallbacks(arg0: string, arg1: any) {
-    throw new Error("Method not implemented.")
-  }
-  multiselectChangeHandler(arg0: string, multiselectChangeHandler: any) {
-    throw new Error("Method not implemented.")
-  }
 
   updateValue (value) {
     value = [].concat(value)
@@ -91,9 +79,6 @@ export class ArrayChoicesEditor extends MultiSelectEditor {
     this.value = newValue
 
     return changed
-  }
-  sanitize(arg0: any) {
-    throw new Error("Method not implemented.")
   }
 
   addNewOption (value) {

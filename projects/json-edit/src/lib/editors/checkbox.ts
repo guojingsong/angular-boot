@@ -1,4 +1,4 @@
-import { AbstractEditor } from '../editor.js'
+import { AbstractEditor } from '../editor'
 
 export class CheckboxEditor extends AbstractEditor {
   label: any

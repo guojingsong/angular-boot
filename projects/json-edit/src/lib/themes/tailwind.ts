@@ -1,5 +1,5 @@
-import { AbstractTheme } from '../theme.js'
-import rules from './tailwind.css.js'
+import { AbstractTheme } from '../theme'
+import rules from './tailwind.css'
 declare const window:any;
 const options = {
   disable_theme_rules: false, /* Disable creation of Inline Style Rules */
@@ -84,7 +84,7 @@ export class tailwindTheme extends AbstractTheme {
     const el = super.getTextareaInput()
     el.classList.add('block', 'w-full', 'px-1', 'text-sm', 'leading-normal', 'bg-white', 'text-black', 'border', 'border-grey', 'rounded')
     if (this.options.enable_compact) el.classList.add('compact')
-    //el.style.height = 0
+    el.style.height = '0'
     return el
   }
 
@@ -237,7 +237,7 @@ export class tailwindTheme extends AbstractTheme {
   getInfoButton (text) {
     const tooltip = document.createElement('a')
     tooltip.classList.add('tooltips', 'float-right')
-    tooltip.innerHTML = 'ⓘ'
+    tooltip.innerHTML = 'Ⓛ'
     const span = document.createElement('span')
     span.innerHTML = text
     tooltip.appendChild(span)

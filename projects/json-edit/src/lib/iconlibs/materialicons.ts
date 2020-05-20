@@ -1,4 +1,4 @@
-import { AbstractIconLib } from '../iconlib.js'
+import { AbstractIconLib } from '../iconlib'
 
 const iconClass = 'material-icons'
 const iconPrefix = ''
@@ -24,6 +24,7 @@ const mapping = {
 }
 
 export class materialiconsIconlib extends AbstractIconLib {
+  icon_class: string
   constructor () {
     super(iconPrefix, mapping)
     this.icon_class = iconClass

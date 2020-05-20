@@ -1,5 +1,5 @@
-import { AbstractEditor } from '../editor.js'
-import { extend } from '../utilities.js'
+import { AbstractEditor } from '../editor'
+import { extend } from '../utilities'
 
 export class UploadEditor extends AbstractEditor {
   label: any

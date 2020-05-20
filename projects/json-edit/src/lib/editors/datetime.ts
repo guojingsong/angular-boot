@@ -17,7 +17,7 @@ ToDo:
  - Improve Handling of flatpicker "multiple" and "range" modes. (Currently the values are just added as string values, but the optimal scenario would be to save those as array if possible)
 
 */
-import { StringEditor } from './string.js'
+import { StringEditor } from './string'
 declare const window:any;
 export class DatetimeEditor extends StringEditor {
   flatpickr: any;

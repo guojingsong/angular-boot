@@ -1,6 +1,6 @@
 /* Non-Active editor for displaying buttons in form */
-import { AbstractEditor } from '../editor.js'
-import { extend } from '../utilities.js'
+import { AbstractEditor } from '../editor'
+import { extend } from '../utilities'
 
 export class ButtonEditor extends AbstractEditor {
   always_disabled: boolean

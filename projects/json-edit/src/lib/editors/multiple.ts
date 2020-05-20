@@ -207,7 +207,7 @@ export class MultipleEditor extends AbstractEditor {
 
     this.switcher_options = this.theme.getSwitcherOptions(this.switcher)
     this.types.forEach((type, i) => {
-      this.editors[i] = false
+      this.editors[i] = undefined
 
       let schema
 

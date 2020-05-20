@@ -137,6 +137,8 @@
     <div *ngIf="visible.form" class="json-schema-form" [@expandSection]="true">
       <div *ngIf="!formActive">{{jsonFormStatusMessage}}</div>
       <!-- This is the form! -->
+      <json-edit></json-edit>  
+      <!-- 
       <json-schema-form
         *ngIf="formActive"
         loadExternalAssets="true"
@@ -149,6 +151,7 @@
         (isValid)="isValid($event)"
         (validationErrors)="validationErrors($event)">
       </json-schema-form>
+      ! -->
 
     </div>
     <hr>

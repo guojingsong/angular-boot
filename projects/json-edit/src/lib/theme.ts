@@ -5,10 +5,9 @@ const matchKey = [
   'msMatchesSelector',
   'oMatchesSelector'].find(key => key in document.documentElement)
 
+declare const window:any;
 export class AbstractTheme {
-  getRadioHolder(controls: any, label: any, description: any, infoText: any) {
-    throw new Error("Method not implemented.")
-  }
+
   jsoneditor: any
   options: any = {}
   static rules: { '.je-upload-preview img': string }
@@ -24,7 +23,8 @@ export class AbstractTheme {
   }
 
   getFloatRightLinkHolder(): HTMLDivElement {
-    const el = document.createElement('div')
+    const el:HTMLDivElement = document.createElement('div')
+    const icon = document.createElement('span')
     //el.style = el.style || {}
     el.style.cssFloat = 'right'
     el.style.marginLeft = '10px'
@@ -59,6 +59,13 @@ export class AbstractTheme {
   }
   setGridColumnSize(el: any, size: any, offset?: any): void {
   }
+  /* TODO */
+
+  getRadioHolder(controls: any, label: any, description: any, infoText: any) :HTMLDivElement {
+    const el:HTMLDivElement = document.createElement('div')
+    return el
+  }
+
 
   getLink(text: any): HTMLAnchorElement {
     const el = document.createElement('a')
@@ -161,10 +168,10 @@ export class AbstractTheme {
       if (infoText) label.appendChild(infoText)
     }
 
-    Object.values(controls).forEach(control => {
-      //control.style.display = 'inline-block'
-      //control.style.marginRight = '20px'
-      //el.appendChild(control)
+    Object.values(controls).forEach((control:HTMLElement) => {
+      control.style.display = 'inline-block'
+      control.style.marginRight = '20px'
+      el.appendChild(control)
     })
 
     if (description) el.appendChild(description)
@@ -226,13 +233,13 @@ export class AbstractTheme {
   }
 
   getSwitcher (options) {
-    const switcher = this.getSelectInput(options, false)
+    const switcher: HTMLSelectElement = this.getSelectInput(options, false)
     switcher.style.backgroundColor = 'transparent'
     switcher.style.display = 'inline-block'
     switcher.style.fontStyle = 'italic'
     switcher.style.fontWeight = 'normal'
     switcher.style.height = 'auto'
-    //switcher.style.marginBottom = 0
+    switcher.style.marginBottom = '0'
     switcher.style.marginLeft = '5px'
     switcher.style.padding = '0 0 0 3px'
     switcher.style.width = 'auto'
@@ -320,7 +327,7 @@ export class AbstractTheme {
   }
 
   getIndentedPanel () : HTMLElement {
-    const el = document.createElement('div')
+    const el:HTMLDivElement = document.createElement('div')
     //el.style = el.style || {}
     el.style.paddingLeft = '10px'
     el.style.marginLeft = '10px'
@@ -329,7 +336,7 @@ export class AbstractTheme {
   }
 
   getTopIndentedPanel (): HTMLElement  {
-    const el = document.createElement('div')
+    const el:HTMLDivElement = document.createElement('div')
     //el.style = el.style || {}
     el.style.paddingLeft = '10px'
     el.style.marginLeft = '10px'
@@ -343,8 +350,8 @@ export class AbstractTheme {
   getDescription (text: any): HTMLElement {
     
     const el = document.createElement('p')
-    //if (window.DOMPurify) el.innerHTML = window.DOMPurify.sanitize(text)
-    //else el.textContent = this.cleanText(text)
+    if (window.DOMPurify) el.innerHTML = window.DOMPurify.sanitize(text)
+    else el.textContent = this.cleanText(text)
     return el
   }
 
@@ -482,7 +489,7 @@ export class AbstractTheme {
   }
 
   getTab(span: any, tabId: any): HTMLElement{    
-    const el = document.createElement('div')
+    const el:HTMLDivElement = document.createElement('div')
     el.appendChild(span)
     el.id = tabId
     //el.style = el.style || {}
@@ -500,7 +507,7 @@ export class AbstractTheme {
     return el
   }
   getTopTab (span: any, tabId: any): HTMLElement {
-    const el = document.createElement('div')
+    const el:HTMLDivElement = document.createElement('div')
     el.id = tabId
     el.appendChild(span)
     //el.style = el.style || {}

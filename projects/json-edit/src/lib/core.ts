@@ -1,10 +1,10 @@
 import { defaults } from './defaults'
-//import { Validator } from './validator'
+import { Validator } from './validator'
 import { SchemaLoader } from './schemaloader'
 import { editors } from './editors/index'
-import { templates } from './templates/index.js'
-import { iconlibs } from './iconlibs/index.js'
-import { themes } from './themes/index.js'
+import { templates } from './templates/index'
+import { iconlibs } from './iconlibs/index'
+import { themes } from './themes/index'
 import { extend, getShadowParent, hasOwnProperty } from './utilities'
 import { AbstractEditor } from './editor'
 import { AbstractTheme } from './theme'
@@ -34,7 +34,7 @@ export class JSONEditor {
   destroyed: any
   callbacks: any
   firing_change: any
-  editors: AbstractEditor[]
+  editors: any
   watchlist: any
   static AbstractEditor: any
   static AbstractTheme: any
@@ -62,14 +62,16 @@ export class JSONEditor {
     this.theme = new themeClass(this)
     const rules = extend(themeClass.rules, this.getEditorsRules())
 
+
     if (!this.theme.options.disable_theme_rules) {
       /* Attempt to locate a shadowRoot parent (i.e. in Web Components) */
-      const shadowRoot = getShadowParent(this.element)
+//      const shadowRoot = getShadowParent(this.element)
 
       /* Call addNewStyleRulesToShadowRoot if shadowRoot is found, otherwise call addNewStyleRules */
-      this[shadowRoot ? 'addNewStyleRulesToShadowRoot' : 'addNewStyleRules'](themeName, rules, shadowRoot)
+//      this[shadowRoot ? 'addNewStyleRulesToShadowRoot' : 'addNewStyleRules'](themeName, rules, shadowRoot)
     }
 
+    
     /* Init icon class */
     const iconClass = JSONEditor.defaults.iconlibs[this.options.iconlib || JSONEditor.defaults.iconlib]
     // eslint-disable-next-line new-cap
@@ -90,7 +92,7 @@ export class JSONEditor {
     loader.load(this.schema, schema => {
       const validatorOptions = this.options.custom_validators ? { custom_validators: this.options.custom_validators } : {}
 
-      //this.validator = new Validator(this, null, validatorOptions, JSONEditor.defaults)
+      this.validator = new Validator(this, null, validatorOptions, JSONEditor.defaults)
 
       const editorClass = this.getEditorClass(schema)
 
@@ -117,10 +119,8 @@ export class JSONEditor {
         if (!this.ready) return
         this.validation_results = this.validator.validate(this.root.getValue())
         this.root.showValidationErrors(this.validation_results)
-        /* TODO
         this.trigger('ready')
         this.trigger('change')
-        */
       })
     }, fetchUrl, location)
   }
@@ -202,7 +202,7 @@ export class JSONEditor {
     return this
   }
 
-  trigger (event, editor) {
+  trigger (event, editor?) {
     if (this.callbacks && this.callbacks[event] && this.callbacks[event].length) {
       for (let i = 0; i < this.callbacks[event].length; i++) {
         this.callbacks[event][i].apply(this, [editor])
@@ -271,9 +271,7 @@ export class JSONEditor {
       }
 
       /* Fire change event */
-      /* TODO
       this.trigger('change')
-      */
     })
 
     return this
@@ -320,14 +318,14 @@ export class JSONEditor {
     }
   }
 
-  registerEditor (editor:AbstractEditor) {
-    //this.editors = this.editors || {}
+  registerEditor (editor) {
+    this.editors = this.editors || {}
     this.editors[editor.path] = editor
     return this
   }
 
-  unregisterEditor (editor:AbstractEditor) {
-    //this.editors = this.editors || {}
+  unregisterEditor (editor) {
+    this.editors = this.editors || {}
     this.editors[editor.path] = null
     return this
   }
@@ -426,12 +424,14 @@ export class JSONEditor {
   }
 }
 
+
 JSONEditor.defaults = defaults
 JSONEditor.AbstractEditor = AbstractEditor
 JSONEditor.AbstractTheme = AbstractTheme
 JSONEditor.AbstractIconLib = AbstractIconLib
 
 Object.assign(JSONEditor.defaults.themes, themes)
+
 Object.assign(JSONEditor.defaults.editors, editors)
 Object.assign(JSONEditor.defaults.templates, templates)
 Object.assign(JSONEditor.defaults.iconlibs, iconlibs)

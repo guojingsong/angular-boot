@@ -1,5 +1,5 @@
 import { StringEditor } from './string'
-//import rules from './starrating.css.js'
+import rules from './starrating.css'
 
 export class StarratingEditor extends StringEditor {
   ratingContainer: HTMLDivElement

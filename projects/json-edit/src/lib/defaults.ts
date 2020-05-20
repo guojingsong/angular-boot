@@ -1,7 +1,7 @@
 import { resolvers } from './resolvers'
-import { AbstractEditor } from './editor'
-import { AbstractIconLib } from './iconlib'
-import { AbstractTheme } from './theme'
+import { editors } from './editors'
+import { iconlibs } from './iconlibs'
+import { themes } from './themes'
 
 /* default theme */
 const theme = 'html'
@@ -12,10 +12,7 @@ const template = 'default'
 /* Global callback list */
 const callbacks = {}
 
-let themes:AbstractTheme;
 let templates:any = {}
-let iconlibs:AbstractIconLib;
-let editors:AbstractEditor;
 const languages:any = {}
 // eslint-disable-next-line camelcase
 const custom_validators:any = []
@@ -258,7 +255,7 @@ languages.en = {
 }
 
 /* Default per-editor options */
-Object.entries(editors).forEach(([i, editor]) => { editors[i].options = editor.options || {} })
+//Object.entries(editors).forEach(([i, editor]) => { editors[i].options = editor.options || {} })
 
 /* Default upload handler */
 function upload (type, file, cbs) {

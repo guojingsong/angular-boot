@@ -1,11 +1,14 @@
 /* This editor is using the signature pad editor from https://github.com/szimek/signature_pad */
 /* Credits for the pad itself go to https://github.com/szimek */
-declare const window:any;
-import { StringEditor } from './string'
 
+
+import { StringEditor } from './string'
+declare const window:any;
+declare const SignaturePad:any;
 export class SignatureEditor extends StringEditor {
-  signaturePad: any
+
   inputs: Iterable<unknown> | ArrayLike<unknown>;
+  signaturePad: any;
   build () {
     if (!this.options.compact) this.header = this.label = this.theme.getFormInputLabel(this.getTitle(), this.isRequired())
     if (this.schema.description) this.description = this.theme.getFormInputDescription(this.schema.description)
@@ -21,7 +24,7 @@ export class SignatureEditor extends StringEditor {
       signatureContainer.classList.add('signature-container')
 
       /* Create canvas for signature pad */
-      const canvas = document.createElement('canvas')
+      const canvas:HTMLCanvasElement = document.createElement('canvas')
       canvas.setAttribute('name', formname)
       canvas.classList.add('signature')
       signatureContainer.appendChild(canvas)
@@ -56,7 +59,7 @@ export class SignatureEditor extends StringEditor {
 
       if (this.schema.readOnly || this.schema.readonly) {
         this.always_disabled = true
-        Array.from(this.inputs).forEach(input => {
+        Array.from(this.inputs).forEach((input:HTMLInputElement) => {
           canvas.setAttribute('readOnly', 'readOnly')
           input.disabled = true
         })
@@ -79,7 +82,7 @@ export class SignatureEditor extends StringEditor {
       if (this.options && this.options.canvas_height) {
         canvas.height = this.options.canvas_height
       } else {
-        canvas.height = '300' /* Set to default height of 300px; */
+        canvas.height = 300 /* Set to default height of 300px; */
       }
     } else {
       const message = document.createElement('p')

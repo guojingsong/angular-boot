@@ -90,7 +90,7 @@ export class AbstractEditor {
     this.onChange()
   }
 
-  unregister () {
+  unregister (inthis?:any) {
     if (!this.jsoneditor) return
     this.jsoneditor.unregisterEditor(this)
   }
@@ -530,13 +530,14 @@ export class AbstractEditor {
   refreshValue () {
 
   }
-
+/*
+  TODO
   getChildEditors () {
     return false
   }
-
+*/
   destroy () {
-    this.unregister()
+    this.unregister(this)
     if (this.watched) {
       Object.values(this.watched).forEach(adjustedPath => this.jsoneditor.unwatch(adjustedPath, this.watch_listener))
     }

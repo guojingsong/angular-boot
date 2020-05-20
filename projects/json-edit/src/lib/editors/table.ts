@@ -1,5 +1,5 @@
-import { ArrayEditor } from './array.js'
-import { extend, trigger } from '../utilities.js'
+import { ArrayEditor } from './array'
+import { extend, trigger } from '../utilities'
 
 export class TableEditor extends ArrayEditor {
   item_default: any

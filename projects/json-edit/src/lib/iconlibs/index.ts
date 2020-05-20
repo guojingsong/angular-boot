@@ -1,12 +1,12 @@
-// import  { bootstrap2Iconlib } from  './bootstrap2.js'
-// import  { bootstrap3Iconlib } from  './bootstrap3.js'
+// import  { bootstrap2Iconlib } from  './bootstrap2'
+// import  { bootstrap3Iconlib } from  './bootstrap3'
 import { fontawesome3Iconlib } from './fontawesome3'
 import { fontawesome4Iconlib } from './fontawesome4'
 import { fontawesome5Iconlib } from './fontawesome5'
-// import  { foundation2Iconlib } from  './foundation2.js'
-// import  { foundation3Iconlib } from  './foundation3.js'
+// import  { foundation2Iconlib } from  './foundation2'
+// import  { foundation3Iconlib } from  './foundation3'
 import { jqueryuiIconlib } from './jqueryui'
-// import  { materialiconsIconlib } from  './materialicons.js'
+// import  { materialiconsIconlib } from  './materialicons'
 import { spectreIconlib } from './spectre'
 
 export const iconlibs = {

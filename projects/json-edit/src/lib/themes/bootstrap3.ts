@@ -1,4 +1,4 @@
-import { AbstractTheme } from '../theme.js'
+import { AbstractTheme } from '../theme'
 declare const window:any;
 export class bootstrap3Theme extends AbstractTheme {
   queuedInputErrorText: any

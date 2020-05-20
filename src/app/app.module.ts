@@ -21,6 +21,9 @@ import { MaterialDesignFrameworkModule } from '../../projects/json-schema-form/s
 import { Bootstrap4FrameworkModule } from '../../projects/json-schema-form/src/lib/framework-library/bootstrap-4-framework/bootstrap-4-framework.module';
 import { Bootstrap3FrameworkModule } from '../../projects/json-schema-form/src/lib/framework-library/bootstrap-3-framework/bootstrap-3-framework.module';
 import { NoFrameworkModule } from '../../projects/json-schema-form/src/lib/framework-library/no-framework/no-framework.module';
+
+import { JsonEditModule } from '../../projects/json-edit/src/lib/json-edit.module';
+
 import { AceEditorDirective } from './ace-editor.directive';
 
 @NgModule({
@@ -33,7 +36,8 @@ import { AceEditorDirective } from './ace-editor.directive';
     MaterialDesignFrameworkModule,
     Bootstrap4FrameworkModule,
     Bootstrap3FrameworkModule,
-    NoFrameworkModule
+    NoFrameworkModule,
+    JsonEditModule
   ],
   bootstrap: [AppComponent]
 })

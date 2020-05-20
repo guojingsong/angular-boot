@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {  } from '@angular/core';
 import { JSONEditor }  from './core';
 @Component({
-  selector: 'lib-json-edit',
+  selector: 'json-edit',
   template: `
-      <div id="editor_holder"></div>
+      <div id='editor_holder'></div>
+      <button id='submit'>Submit (console.log)</button>      
   `,
   styles: [
   ]
@@ -50,6 +51,10 @@ export class JsonEditComponent implements OnInit {
           }
         }
       }
+    });    
+    document.getElementById('submit').addEventListener('click',function() {
+      // Get the value from the editor
+      console.log(editor.getValue());
     });    
   }
 

@@ -85,7 +85,9 @@ export class Select2Editor extends SelectEditor {
         /* Remove data attribute to make option tag permanent. */
         optionTag.removeAttribute('data-select2-tag')
       } else {
+        /* TODO
         this.input.appendChild(new Option(sanitized, sanitized, false, false)).trigger('change')
+        */
       }
 
       res = true

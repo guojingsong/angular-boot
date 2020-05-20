@@ -1,4 +1,4 @@
-import { ipValidator } from './validators/ip-validator.js'
+import { ipValidator } from './validators/ip-validator'
 import { extend, hasOwnProperty } from './utilities'
 declare const window:any;
 export class Validator {
@@ -8,7 +8,7 @@ export class Validator {
   options: any
   translate: any
   defaults: any
-  _validateNumberSubSchema: { multipleOf(schema: any, value: any, path: any): any; divisibleBy(schema: any, value: any, path: any): any; maximum(schema: any, value: any, path: any): { path: any; property: string; message: any }[]; minimum(schema: any, value: any, path: any): { ... }[] }
+  _validateNumberSubSchema: { multipleOf(schema: any, value: any, path: any): any; divisibleBy(schema: any, value: any, path: any): any; maximum(schema: any, value: any, path: any): { path: any; property: string; message: any }[]; minimum(schema: any, value: any, path: any): {}[] }
   _validateStringSubSchema: {
   maxLength(schema: any, value: any, path: any): any[]
     /* `minLength` */
@@ -18,7 +18,7 @@ export class Validator {
   }
   _validateObjectSubSchema: { maxProperties(schema: any, value: any, path: any): { path: any; property: string; message: any }[]; minProperties(schema: any, value: any, path: any): { path: any; property: string; message: any }[]; required(schema: any, value: any, path: any): any[]; properties(schema: any, value: any, path: any, validatedProperties: any): any[]; patternProperties(schema: any, value: any, path: any, validatedProperties: any): any[] }
   _validateObjectSubSchema2: { additionalProperties(schema: any, value: any, path: any, validatedProperties: any): any[]; dependencies(schema: any, value: any, path: any): any[] }
-  _validateArraySubSchema: { items(schema: any, value: any, path: any): any[]; maxItems(schema: any, value: any, path: any): { path: any; property: string; message: any }[]; minItems(schema: any, value: any, path: any): { ... }[]; uniqueItems(schema: any, value: any, path: any): { ... }[] }
+  _validateArraySubSchema: { items(schema: any, value: any, path: any): any[]; maxItems(schema: any, value: any, path: any): { path: any; property: string; message: any }[]; minItems(schema: any, value: any, path: any): {}[]; uniqueItems(schema: any, value: any, path: any): {}[] }
   constructor (jsoneditor, schema, options, defaults) {
     this.jsoneditor = jsoneditor
     this.schema = schema || this.jsoneditor.schema
@@ -476,7 +476,7 @@ export class Validator {
     return this._validateSchema(this.schema, value)
   }
 
-  _validateSchema (schema, value, path?) {
+  _validateSchema (schema, value, path?,translate?) {
     const errors = []
     path = path || 'root'
 
