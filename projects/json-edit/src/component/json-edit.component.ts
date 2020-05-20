@@ -14,8 +14,6 @@ export class JsonEditComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
     var editor = new JSONEditor(document.getElementById('editor_holder'),{
-
-      
       schema: {
         type: "object",
         title: "Car",
