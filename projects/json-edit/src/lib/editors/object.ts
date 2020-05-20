@@ -1,4 +1,4 @@
-import { AbstractEditor } from '../editor'
+import { AbstractEditor } from '../abstract-editor'
 import { extend, trigger, hasOwnProperty } from '../utilities'
 
 export class ObjectEditor extends AbstractEditor {
@@ -38,6 +38,7 @@ export class ObjectEditor extends AbstractEditor {
   editing_json: boolean
   addproperty_checkboxes: any
   adding_property: boolean
+
   getDefault () {
     return extend({}, this.schema.default || {})
   }
@@ -63,6 +64,7 @@ export class ObjectEditor extends AbstractEditor {
   getNumColumns () {
     return Math.max(Math.min(12, this.maxwidth), 3)
   }
+  
   /*
   maxwidth(arg0: number, maxwidth: any): number {
     throw new Error("Method not implemented.")

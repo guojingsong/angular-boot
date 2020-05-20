@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  } from '@angular/core';
-import { JSONEditor }  from './core';
+import { JSONEditor }  from '../lib/json-editor';
 @Component({
   selector: 'json-edit',
   template: `
@@ -14,6 +14,8 @@ export class JsonEditComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
     var editor = new JSONEditor(document.getElementById('editor_holder'),{
+
+      
       schema: {
         type: "object",
         title: "Car",

@@ -1,4 +1,4 @@
-import { AbstractEditor } from '../editor'
+import { AbstractEditor } from '../abstract-editor'
 declare const window:any;
 export class MultiSelectEditor extends AbstractEditor {
   select_options: {}

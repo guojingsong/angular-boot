@@ -1,5 +1,5 @@
 /* Multiple Editor (for when `type` is an array, also when `oneOf` is present) */
-import { AbstractEditor } from '../editor'
+import { AbstractEditor } from '../abstract-editor'
 import { Validator } from '../validator'
 import { extend } from '../utilities'
 

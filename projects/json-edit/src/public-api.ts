@@ -2,6 +2,6 @@
  * Public API Surface of json-edit
  */
 
-export * from './lib/json-edit.service';
-export * from './lib/json-edit.component';
-export * from './lib/json-edit.module';
+export * from './component/json-edit.service';
+export * from './component/json-edit.component';
+export * from './component/json-edit.module';

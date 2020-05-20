@@ -22,7 +22,7 @@ import { Bootstrap4FrameworkModule } from '../../projects/json-schema-form/src/l
 import { Bootstrap3FrameworkModule } from '../../projects/json-schema-form/src/lib/framework-library/bootstrap-3-framework/bootstrap-3-framework.module';
 import { NoFrameworkModule } from '../../projects/json-schema-form/src/lib/framework-library/no-framework/no-framework.module';
 
-import { JsonEditModule } from '../../projects/json-edit/src/lib/json-edit.module';
+import { JsonEditModule } from '../../projects/json-edit/src/component/json-edit.module';
 
 import { AceEditorDirective } from './ace-editor.directive';
 

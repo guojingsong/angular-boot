@@ -1,5 +1,5 @@
 /* Non-Active editor for displaying buttons in form */
-import { AbstractEditor } from '../editor'
+import { AbstractEditor } from '../abstract-editor'
 import { extend } from '../utilities'
 
 export class ButtonEditor extends AbstractEditor {

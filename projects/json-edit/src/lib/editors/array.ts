@@ -1,4 +1,4 @@
-import { AbstractEditor } from '../editor'
+import { AbstractEditor } from '../abstract-editor'
 import { extend, trigger } from '../utilities'
 
 export class ArrayEditor extends AbstractEditor {

@@ -1,4 +1,4 @@
-import { AbstractTheme } from '../theme'
+import { AbstractTheme } from '../abstract-theme'
 //import rules from './bootstrap4.css'
 
 /* Theme config options that allows changing various aspects of the output */

@@ -1,4 +1,4 @@
-import { AbstractIconLib } from '../iconlib'
+import { AbstractIconLib } from '../abstract-Icon-lib'
 
 const iconPrefix = 'foundicon-'
 const mapping = {

@@ -1,5 +1,5 @@
 /* Enum Editor (used for objects and arrays with enumerated values) */
-import { AbstractEditor } from '../editor'
+import { AbstractEditor } from '../abstract-editor'
 
 export class EnumEditor extends AbstractEditor {
   title: any

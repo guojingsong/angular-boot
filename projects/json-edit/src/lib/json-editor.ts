@@ -6,9 +6,9 @@ import { templates } from './templates/index'
 import { iconlibs } from './iconlibs/index'
 import { themes } from './themes/index'
 import { extend, getShadowParent, hasOwnProperty } from './utilities'
-import { AbstractEditor } from './editor'
-import { AbstractTheme } from './theme'
-import { AbstractIconLib } from './iconlib'
+import { AbstractEditor } from './abstract-editor'
+import { AbstractTheme } from './abstract-theme'
+import { AbstractIconLib } from './abstract-Icon-lib'
 
 export class JSONEditor {
 
@@ -431,7 +431,6 @@ JSONEditor.AbstractTheme = AbstractTheme
 JSONEditor.AbstractIconLib = AbstractIconLib
 
 Object.assign(JSONEditor.defaults.themes, themes)
-
 Object.assign(JSONEditor.defaults.editors, editors)
 Object.assign(JSONEditor.defaults.templates, templates)
 Object.assign(JSONEditor.defaults.iconlibs, iconlibs)

@@ -1,4 +1,4 @@
-import { AbstractTheme } from '../theme'
+import { AbstractTheme } from '../abstract-theme'
 export class barebonesTheme extends AbstractTheme {
   addInputError (input, text) {
     if (!input.errmsg) {

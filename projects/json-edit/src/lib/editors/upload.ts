@@ -1,4 +1,4 @@
-import { AbstractEditor } from '../editor'
+import { AbstractEditor } from '../abstract-editor'
 import { extend } from '../utilities'
 
 export class UploadEditor extends AbstractEditor {

@@ -1,5 +1,5 @@
 /* Base Foundation theme */
-import { AbstractTheme } from '../theme'
+import { AbstractTheme } from '../abstract-theme'
 declare const window:any;
 export class foundationTheme extends AbstractTheme {
   queuedInputErrorText: any;

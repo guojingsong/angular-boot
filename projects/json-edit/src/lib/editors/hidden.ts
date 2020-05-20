@@ -1,7 +1,7 @@
 /**
  * Created by Mehmet Baker on 12.04.2017
  */
-import { AbstractEditor } from '../editor'
+import { AbstractEditor } from '../abstract-editor'
 
 export class HiddenEditor extends AbstractEditor {
   template: any

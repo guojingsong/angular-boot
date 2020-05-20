@@ -1,4 +1,4 @@
-import { AbstractTheme } from '../theme'
+import { AbstractTheme } from '../abstract-theme'
 import rules from './tailwind.css'
 declare const window:any;
 const options = {

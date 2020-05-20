@@ -1,5 +1,5 @@
-import { AbstractTheme } from '../theme'
-//import rules from './html.css.ts'
+import { AbstractTheme } from '../abstract-theme'
+import rules from './html.css'
 
 export class htmlTheme extends AbstractTheme {
   getFormInputLabel (text, req) {
@@ -69,4 +69,4 @@ export class htmlTheme extends AbstractTheme {
 }
 
 /* Custom stylesheet rules. format: "selector" : "CSS rules" */
-//htmlTheme.rules = rules
+htmlTheme.rules = rules

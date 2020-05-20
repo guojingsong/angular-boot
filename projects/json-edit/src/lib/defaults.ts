@@ -3,6 +3,7 @@ import { editors } from './editors'
 import { iconlibs } from './iconlibs'
 import { themes } from './themes'
 
+
 /* default theme */
 const theme = 'html'
 
@@ -13,6 +14,7 @@ const template = 'default'
 const callbacks = {}
 
 let templates:any = {}
+
 const languages:any = {}
 // eslint-disable-next-line camelcase
 const custom_validators:any = []
@@ -255,7 +257,11 @@ languages.en = {
 }
 
 /* Default per-editor options */
-//Object.entries(editors).forEach(([i, editor]) => { editors[i].options = editor.options || {} })
+Object.entries(editors).forEach(([i, editor]) => 
+{ 
+  // TODO
+  //editors[i].options = editor.options || {} 
+})
 
 /* Default upload handler */
 function upload (type, file, cbs) {

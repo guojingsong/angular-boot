@@ -1,5 +1,5 @@
 /* Spectre Theme using Spectre CSS framework. <https://picturepan2.github.io/spectre/index.html> */
-import { AbstractTheme } from '../theme'
+import { AbstractTheme } from '../abstract-theme'
 import rules from './spectre.css'
 declare const window:any;
 /* Config options that allows changing various aspects of the output */
